@@ -1,0 +1,18 @@
+---
+page: true
+---
+
+<div class="photo-page">
+
+<img src="../images/photo02.jpg">
+
+<div class="caption">
+
+Monolithe II
+
+</div>
+
+</div>
+
+<div class="nav-left"></div>
+<div class="nav-right"></div>

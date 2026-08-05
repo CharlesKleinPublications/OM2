@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Odyssée — Le Monolithe</title>
+<title>quarto-input737086f91b5f40d1 – Odyssée — Le Monolithe</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -30,86 +30,32 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/tabby.min.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-html-640605f58ae58ee79329c070719e555b.min.css" rel="stylesheet" append-hash="true" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html-640605f58ae58ee79329c070719e555b.min.css" rel="stylesheet" append-hash="true" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 
 
-<link rel="stylesheet" href="css/monolithe.css">
+<link rel="stylesheet" href="../css/monolithe.css">
 </head>
 
 <body>
 
 
-<header id="title-block-header">
-<h1 class="title">Odyssée — Le Monolithe</h1>
-
-</header>
 
 
-<div id="book">
-<!-- =========================
-     COUVERTURE
-========================= -->
-<section class="cover page">
-<p><img src="images/cover.jpg" class="cover-image"></p>
-<div class="cover-text">
-<h1>
-Odyssée
-</h1>
-<h2 class="anchored">
-Le Monolithe
-</h2>
-<p>
-Une méditation photographique sur la matière, la mémoire et les traces humaines.
-</p>
-<p><a class="enter" onclick="next()"> Entrer → </a></p>
-</div>
-</section>
-<!-- =========================
-     PHOTOGRAPHIE 01
-========================= -->
-<section class="photo-page page">
-<p><img src="images/photo01.jpg"></p>
-<div class="caption">
-<p>Monolithe I</p>
-</div>
-</section>
-<!-- =========================
-     PHOTOGRAPHIE 02
-========================= -->
-<section class="photo-page page">
-<p><img src="images/photo02.jpg"></p>
+
+<div class="photo-page">
+<p><img src="../images/photo02.jpg"></p>
 <div class="caption">
 <p>Monolithe II</p>
 </div>
-</section>
-<!-- =========================
-     PHOTOGRAPHIE 03
-========================= -->
-<section class="photo-page page">
-<p><img src="images/photo03.jpg"></p>
-<div class="caption">
-<p>Monolithe III</p>
 </div>
-</section>
-<!-- =========================
-     PHOTOGRAPHIE 04
-========================= -->
-<section class="photo-page page">
-<p><img src="images/photo04.jpg"></p>
-<div class="caption">
-<p>Monolithe IV</p>
-</div>
-</section>
-</div>
-<!-- Zones de navigation -->
 <div class="nav-left">
 
 </div>
@@ -118,6 +64,289 @@ Une méditation photographique sur la matière, la mémoire et les traces humain
 </div>
 
 
+let pages=[];
+
+
+
+let current=0;
+
+
+
+
+
+
+
+window.onload=function(){
+
+
+
+
+
+pages=[
+
+...document.querySelectorAll(
+
+".photo-page"
+
+)
+
+];
+
+
+
+
+
+showPage(0);
+
+
+
+
+
+
+
+document.querySelector(".nav-left")
+
+?.addEventListener(
+
+"click",
+
+previous
+
+);
+
+
+
+
+
+document.querySelector(".nav-right")
+
+?.addEventListener(
+
+"click",
+
+next
+
+);
+
+
+
+
+
+
+
+};
+
+
+
+
+
+
+
+function showPage(i){
+
+
+
+pages.forEach(
+
+(p,index)=&gt;{
+
+
+
+p.style.display=
+
+index===i
+
+?"flex"
+
+:"none";
+
+
+
+}
+
+);
+
+
+
+current=i;
+
+
+
+}
+
+
+
+
+
+
+
+function next(){
+
+
+
+if(current &lt; pages.length-1){
+
+
+
+current++;
+
+
+
+showPage(current);
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+function previous(){
+
+
+
+if(current&gt;0){
+
+
+
+current--;
+
+
+
+showPage(current);
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+document.addEventListener(
+
+"keydown",
+
+function(e){
+
+
+
+if(e.key==="ArrowRight")
+
+next();
+
+
+
+
+
+if(e.key==="ArrowLeft")
+
+previous();
+
+
+
+
+
+if(e.code==="Space")
+
+next();
+
+
+
+
+
+}
+
+
+
+);
+
+
+
+
+
+
+
+let startX=0;
+
+
+
+
+
+document.addEventListener(
+
+"touchstart",
+
+e=&gt;{
+
+
+
+startX=e.touches[0].clientX;
+
+
+
+}
+
+
+
+);
+
+
+
+
+
+
+
+document.addEventListener(
+
+"touchend",
+
+e=&gt;{
+
+
+
+
+
+let endX=e.changedTouches[0].clientX;
+
+
+
+
+
+if(startX-endX&gt;50)
+
+next();
+
+
+
+
+
+if(endX-startX&gt;50)
+
+previous();
+
+
+
+
+
+}
+
+
+
+);
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
@@ -522,7 +751,6 @@ Une méditation photographique sur la matière, la mémoire et les traces humain
     }
   });
   </script>
-<script src="js/navigation.js"></script>
 
 
 

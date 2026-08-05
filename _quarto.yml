@@ -1,15 +1,23 @@
 project:
   type: website
-  output-dir: docs
 
 website:
-  title: "Odyssée – Monolithe"
-  page-navigation: false
-  navbar: false
+  title: "Odyssée — Le Monolithe"
+  
+  navbar:
+    false
+
 
 format:
+
   html:
     theme: none
+    css:
+      - css/monolithe.css
+
+    include-after-body: 
+     text: |
+      <script src="js/navigation.js"></script>
+
     toc: false
-    smooth-scroll: true
-    css: styles.css
+    page-layout: full

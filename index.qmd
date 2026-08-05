@@ -1,13 +1,142 @@
 ---
-title: "Odyssée — Monolithe"
+title: "Odyssée — Le Monolithe"
+format:
+  html:
+    toc: false
 ---
 
-# Odyssée by cKKK
 
-![Monolithe](images/photo01.jpg)
-![Monolithe](images/photo02.jpg)
+<div id="book">
 
----
 
-La pierre conserve les traces du temps.
+<!-- =========================
+     COUVERTURE
+========================= -->
 
+
+<section class="cover page">
+
+
+<img src="images/cover.jpg" class="cover-image">
+
+
+<div class="cover-text">
+
+
+<h1>Odyssée</h1>
+
+
+<h2>Le Monolithe</h2>
+
+
+<p>
+Une méditation photographique sur la matière,
+la mémoire et les traces humaines.
+</p>
+
+
+<a class="enter" onclick="next()">
+Entrer →
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- =========================
+     PHOTOGRAPHIE 01
+========================= -->
+
+
+<section class="photo-page page">
+
+
+<img src="images/photo01.jpg">
+
+
+<div class="caption">
+Monolithe I
+</div>
+
+
+</section>
+
+
+
+
+<!-- =========================
+     PHOTOGRAPHIE 02
+========================= -->
+
+
+<section class="photo-page page">
+
+
+<img src="images/photo02.jpg">
+
+
+<div class="caption">
+Monolithe II
+</div>
+
+
+</section>
+
+
+
+
+<!-- =========================
+     PHOTOGRAPHIE 03
+========================= -->
+
+
+<section class="photo-page page">
+
+
+<img src="images/photo03.jpg">
+
+
+<div class="caption">
+Monolithe III
+</div>
+
+
+</section>
+
+
+
+
+<!-- =========================
+     PHOTOGRAPHIE 04
+========================= -->
+
+
+<section class="photo-page page">
+
+
+<img src="images/photo04.jpg">
+
+
+<div class="caption">
+Monolithe IV
+</div>
+
+
+</section>
+
+
+
+</div>
+
+
+
+<!-- Zones de navigation -->
+
+<div class="nav-left"></div>
+
+<div class="nav-right"></div>
