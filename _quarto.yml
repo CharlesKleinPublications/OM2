@@ -1,0 +1,15 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Odyssée – Monolithe"
+  page-navigation: false
+  navbar: false
+
+format:
+  html:
+    theme: none
+    toc: false
+    smooth-scroll: true
+    css: styles.css
