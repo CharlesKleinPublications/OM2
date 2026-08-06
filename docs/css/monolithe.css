@@ -508,3 +508,35 @@ max-height:90vh;
 object-fit:contain;
 
 }
+
+/* =================================
+   COMPTEUR DE PAGES
+================================= */
+
+#page-counter{
+
+position:fixed;
+
+right:3vw;
+
+bottom:2.8vh;
+
+z-index:50;
+
+font-family:"Literata",serif;
+
+font-size:.78rem;
+
+font-weight:300;
+
+letter-spacing:.18em;
+
+color:#5c554b;
+
+opacity:.60;
+
+user-select:none;
+
+pointer-events:none;
+
+}

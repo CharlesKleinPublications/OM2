@@ -1,120 +1,158 @@
-let pages=[];
-let current=0;
+// =========================================
+// Navigation du livre
+// =========================================
 
+let pages = [];
+let current = 0;
 
-window.addEventListener("DOMContentLoaded",()=>{
+// -----------------------------------------
+// Initialisation
+// -----------------------------------------
 
+window.addEventListener("DOMContentLoaded", () => {
 
-pages=[
-...document.querySelectorAll(".page")
-];
+    pages = [...document.querySelectorAll(".page")];
 
+    showPage(0);
 
-showPage(0);
+    const left = document.querySelector(".nav-left");
+    const right = document.querySelector(".nav-right");
 
+    if (left) {
+        left.addEventListener("click", previous);
+    }
 
-document.querySelector(".nav-right")
-.addEventListener("click",next);
-
-
-document.querySelector(".nav-left")
-.addEventListener("click",previous);
-
-
-});
-
-
-function showPage(i){
-
-pages.forEach((page,index)=>{
-
-page.style.display =
-index===i ? "flex" : "none";
+    if (right) {
+        right.addEventListener("click", next);
+    }
 
 });
 
+// -----------------------------------------
+// Affichage d'une page
+// -----------------------------------------
 
-pages[i].classList.remove("fade");
+function showPage(index) {
 
-void pages[i].offsetWidth;
+    pages.forEach((page, i) => {
 
-pages[i].classList.add("fade");
+        page.style.display = (i === index) ? "flex" : "none";
 
+    });
 
-current=i;
+    pages[index].classList.remove("fade");
+    void pages[index].offsetWidth;
+    pages[index].classList.add("fade");
 
-}
+    current = index;
 
-
-
-function next(){
-
-if(current < pages.length-1){
-
-showPage(current+1);
-
-}
+    updateCounter();
 
 }
 
+// -----------------------------------------
+// Compteur
+// -----------------------------------------
 
+function updateCounter() {
 
-function previous(){
+    const counter = document.getElementById("page-counter");
 
-if(current>0){
+    if (!counter) return;
 
-showPage(current-1);
+    // Pas de compteur sur la couverture
+    if (current === 0) {
+
+        counter.style.display = "none";
+        return;
+
+    }
+
+    counter.style.display = "block";
+
+    const page = current;
+    const total = pages.length - 1;
+
+    counter.textContent = page + " / " + total;
 
 }
 
+// -----------------------------------------
+// Navigation
+// -----------------------------------------
+
+function next() {
+
+    if (current < pages.length - 1) {
+
+        showPage(current + 1);
+
+    }
+
 }
 
+function previous() {
 
+    if (current > 0) {
 
-document.addEventListener(
-"keydown",
-(e)=>{
+        showPage(current - 1);
 
-if(e.key==="ArrowRight")
-next();
+    }
 
+}
 
-if(e.key==="ArrowLeft")
-previous();
+// -----------------------------------------
+// Clavier
+// -----------------------------------------
 
+document.addEventListener("keydown", (e) => {
 
-if(e.code==="Space")
-next();
+    if (e.key === "ArrowRight") next();
+
+    if (e.key === "ArrowLeft") previous();
+
+    if (e.code === "Space") {
+
+        e.preventDefault();
+
+        next();
+
+    }
+
+    if (e.key === "Enter" && current === 0) {
+
+        next();
+
+    }
 
 });
 
+// -----------------------------------------
+// Mobile
+// -----------------------------------------
 
+let startX = 0;
 
-let startX=0;
+document.addEventListener("touchstart", (e) => {
 
-
-document.addEventListener(
-"touchstart",
-(e)=>{
-
-startX=e.changedTouches[0].screenX;
+    startX = e.touches[0].clientX;
 
 });
 
+document.addEventListener("touchend", (e) => {
 
-document.addEventListener(
-"touchend",
-(e)=>{
+    const endX = e.changedTouches[0].clientX;
 
-let endX=e.changedTouches[0].screenX;
+    if (startX - endX > 50) {
 
+        next();
 
-if(startX-endX>50)
-next();
+    }
 
+    if (endX - startX > 50) {
 
-if(endX-startX>50)
-previous();
+        previous();
 
+    }
 
 });

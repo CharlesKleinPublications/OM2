@@ -35,8 +35,8 @@ la mémoire et les traces humaines.
 </p>
 
 
-<a class="enter" onclick="next()">
-Entrer →
+<a class="enter" href="#" onclick="next(); return false;">
+    Entrer →
 </a>
 
 
@@ -131,9 +131,7 @@ Monolithe IV
 
 
 
-</div>
-
-
+<div id="page-counter"></div>
 
 <!-- Zones de navigation -->
 
