@@ -68,6 +68,31 @@ Monolithe I
 
 
 
+<!-- =========================
+     PAGE TEXTE
+========================= -->
+
+<section class="text-page page">
+
+  <div class="text-content">
+
+    <h2>Interlude — La Matière</h2>
+
+    <p>
+    La pierre conserve les traces du temps.  
+    Elle porte les marques de ce qui a été,  
+    et de ce qui disparaît lentement.
+    </p>
+
+    <p>
+    Dans ce silence minéral,  
+    chaque fissure devient une mémoire.
+    </p>
+
+  </div>
+
+</section>
+
 
 <!-- =========================
      PHOTOGRAPHIE 02
