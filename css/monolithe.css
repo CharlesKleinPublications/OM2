@@ -353,6 +353,35 @@ opacity:.55;
 }
 
 
+/* =================================
+   TYPOGRAPHIE DES PAGES TEXTE
+================================= */
+
+.text-content {
+    width: min(680px, 72vw);
+    text-align: left;
+    font-family: "Literata", serif;
+    color: #514b43;
+}
+
+.text-content h2 {
+    margin: 0 0 3rem 0;
+    font-family: "Literata", serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: .04em;
+    color: #4a453e;
+}
+
+.text-content p {
+    margin: 0 0 1.6rem 0;
+    font-family: "Literata", serif;
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: #514b43;
+}
+
 
 /* =================================
    NAVIGATION CLIC

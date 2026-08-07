@@ -72,26 +72,21 @@ Monolithe I
      PAGE TEXTE
 ========================= -->
 
-<section class="text-page page">
+::: {.text-page .page}
 
-  <div class="text-content">
+::: {.text-content}
 
-    <h2>Interlude — La Matière</h2>
+## Le Monolithe
 
-    <p>
-    La pierre conserve les traces du temps.  
-    Elle porte les marques de ce qui a été,  
-    et de ce qui disparaît lentement.
-    </p>
+Il demeure là, silencieux, comme une présence dont le temps aurait effacé l'origine.
 
-    <p>
-    Dans ce silence minéral,  
-    chaque fissure devient une mémoire.
-    </p>
+La matière ne raconte rien. Elle conserve. Les traces, les fissures et les surfaces portent une mémoire qui ne demande pas à être déchiffrée.
 
-  </div>
+Devant ces formes immobiles, le regard se déplace lentement. Ce qui semblait être une pierre devient architecture, puis paysage, puis fragment de mémoire.
 
-</section>
+:::
+
+:::
 
 
 <!-- =========================
@@ -154,7 +149,12 @@ Monolithe IV
 
 </section>
 
+<!-- =========================
+     FIN DU LIVRE
+========================= -->
+</div>
 
+<!-- Compteur -->
 
 <div id="page-counter"></div>
 
