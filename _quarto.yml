@@ -9,6 +9,24 @@ website:
     false
 
 
+
+title: "Odyssée — Le Monolithe"
+author: "Charles Klein"
+
+description: >
+  Publication photographique de Charles Klein autour de la matière,
+  de la mémoire et des traces humaines.
+
+keywords:
+  - photographie d'auteur
+  - Charles Klein
+  - Odyssée
+  - Le Monolithe
+  - photographie contemporaine
+
+canonical: "https://charleskleinpublications.github.io/xxx/"
+
+
 format:
 
   html:

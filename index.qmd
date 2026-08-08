@@ -56,8 +56,10 @@ la mémoire et les traces humaines.
 <section class="photo-page page">
 
 
-<img src="images/photo01.jpg">
-
+<img 
+src="images/photo01.jpg"
+alt="Monolithe de pierre dans un paysage désertique — Odyssée, Charles Klein">
+>
 
 <div class="caption">
 Monolithe I
